@@ -30,6 +30,6 @@ for row in table_html:
 date = pd.DataFrame({"Date": date})
 data_1month_tbill_rates = pd.DataFrame({"TBill-1m": rate})
 data_1month_tbill_rates = data_1month_tbill_rates.join(date)
-data_1month_tbill_rates = data_1month_tbill_rates.set_index("Date")
+data_1month_tbill_rates = data_1month_tbill_rates.set_index("Date")/100
 
 data_1month_tbill_rates.to_excel("TBill 1m Daily.xlsx")
